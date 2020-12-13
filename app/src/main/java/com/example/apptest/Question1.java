@@ -23,15 +23,15 @@ public class Question1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_1);
-        Button save = findViewById(R.id.save_name);
-        Button next = findViewById(R.id.next_screen);
-        EditText name = findViewById(R.id.name);
+        save = findViewById(R.id.save_name);
+        next = findViewById(R.id.next_screen);
+        name = findViewById(R.id.name);
     }
     public void setUsername(){
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fileName = name.getText().toString();
+                fileName = name.getText().toString();
             }
         });
     }
