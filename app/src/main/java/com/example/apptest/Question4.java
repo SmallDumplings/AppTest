@@ -13,7 +13,7 @@ public class Question4 extends AppCompatActivity {
     TextView text2, text3;
     CheckBox checkBox, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6;
     Button btn2;
-    final boolean[] e = {false};
+    boolean e[] = new boolean[5];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +78,7 @@ public class Question4 extends AppCompatActivity {
                 }
             }
         });
-        if (e[0] = true && e[1] = false && e[2] = false && e[3] = true && e[4] = false && e[5]= true){
+        if (e[0] == true && e[1] == false && e[2] == false && e[3] == true && e[4] == false && e[5]== true){
             fin++;
         }
     }
