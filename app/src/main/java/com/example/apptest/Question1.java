@@ -19,6 +19,7 @@ public class Question1 extends AppCompatActivity {
     Button save,next;
     EditText name;
     String fileName = "Test.text";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,16 +27,6 @@ public class Question1 extends AppCompatActivity {
         save = findViewById(R.id.save_name);
         next = findViewById(R.id.next_screen);
         name = findViewById(R.id.name);
-    }
-    public void setUsername(){
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fileName = name.getText().toString();
-            }
-        });
-    }
-    public void next(View v){
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +34,11 @@ public class Question1 extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fileName = name.getText().toString();
+            }
+        });
     }
-
 }

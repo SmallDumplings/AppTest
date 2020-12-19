@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import static com.example.apptest.FinalActivity.fin;
 
 public class Question4 extends AppCompatActivity {
     TextView text2, text3;
@@ -26,6 +27,7 @@ public class Question4 extends AppCompatActivity {
         checkBox5 = findViewById(R.id.checkBox5);
         checkBox6 = findViewById(R.id.checkBox6);
         btn2 = findViewById(R.id.btn2);
+        checked();
     }
     public void checked(){
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -76,9 +78,8 @@ public class Question4 extends AppCompatActivity {
                 }
             }
         });
+        if (e[0] = true && e[1] = false && e[2] = false && e[3] = true && e[4] = false && e[5]= true){
+            fin++;
+        }
     }
-   // public void checked2(){
-        //if (e[0] = true && e[1] = false && e[2] = false && e[3] = true && e[4] = false && e[5]= true){
-        //}
-    //}
 }

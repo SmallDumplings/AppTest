@@ -10,6 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import static com.example.apptest.FinalActivity.fin;
+
 public class Question3 extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton answ1, answ2, answ3, answ4;
@@ -19,6 +21,7 @@ public class Question3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle arg = getIntent().getExtras();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question3);
         radioGroup = findViewById(R.id.radioGroup);
@@ -29,8 +32,13 @@ public class Question3 extends AppCompatActivity {
         quest = findViewById(R.id.quest);
         btn = findViewById(R.id.next);
         radioGroup.clearCheck();
-    }
-    public void setRadioGroup() {
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Question3.this, Question4.class);
+                startActivity(intent);
+            }
+        });
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             int id = radioGroup.getCheckedRadioButtonId();
 
@@ -53,19 +61,8 @@ public class Question3 extends AppCompatActivity {
                 }
             }
         });
-    }
-    public void checked(){
-        if(checkedRadioButtonId == 2){
-
+        if (checkedRadioButtonId == 2) {
+            fin++;
         }
-    }
-    public void next(){
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Question3.this, Question4.class);
-                startActivity(intent);
-            }
-        });
     }
 }

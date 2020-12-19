@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import static com.example.apptest.FinalActivity.fin;
+
+
+
 
 public class Question2 extends AppCompatActivity {
     TextView text;
@@ -23,28 +27,24 @@ public class Question2 extends AppCompatActivity {
         save2 = findViewById(R.id.save2);
         next2 = findViewById(R.id.next2);
         et = findViewById(R.id.et);
-    }
-    public void save(){
+        next2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Question2.this, Question3.class);
+                startActivity(intent);
+
+            }
+        });
         save2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 a = et.getText().toString();
             }
         });
-    }
-    public void checked(){
-        if(a == "ответ Doublevar=double.MAX_VALUE"){
-
+        if(a == "Doublevar=double.MAX_VALUE"){
+            fin++;
         }
     }
-    public void next(){
-        next2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Question2.this, Question3.class);
-                startActivity(intent);
-            }
-        });
-    }
+
 
 }
