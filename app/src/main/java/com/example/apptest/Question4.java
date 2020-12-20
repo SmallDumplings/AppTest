@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 
@@ -15,7 +14,6 @@ public class Question4 extends AppCompatActivity {
     TextView text2, text3;
     CheckBox checkBox, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6;
     Button btn2;
-    boolean e[] = new boolean[5];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,73 +37,8 @@ public class Question4 extends AppCompatActivity {
         checked();
     }
     public void checked(){
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    e[0] = true;
-                }
-                else{
-                    e[0]=false;
-                }
-            }
-        });
-        checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    e[1] = false;
-                }
-                else{
-                    e[1]= true;
-                }
-            }
-        });
-        checkBox3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    e[2] = false;
-                }
-                else{
-                    e[2]=true;
-                }
-            }
-        });
-        checkBox4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    e[3] = true;
-                } else {
-                    e[3] = false;
-                }
-            }
-        });
-        checkBox5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    e[4] = false;
-                }
-                else{
-                    e[4]=true;
-                }
-            }
-        });
-        checkBox6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    e[5] = true;
-                }
-                else{
-                    e[5]= false;
-                }
-            }
-        });
-        if (e[0] == true && e[1] == false && e[2] == false && e[3] == true && e[4] == false && e[5]== true){
-            FinalActivity.fin++;
+        if(checkBox.isChecked()&& checkBox4.isChecked()&&checkBox6.isChecked()&& !checkBox3.isChecked() && !checkBox2.isChecked() && !checkBox5.isChecked()){
+           FinalActivity.fin++;
         }
     }
 }
