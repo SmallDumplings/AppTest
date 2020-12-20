@@ -2,7 +2,9 @@ package com.example.apptest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -27,6 +29,13 @@ public class Question4 extends AppCompatActivity {
         checkBox5 = findViewById(R.id.checkBox5);
         checkBox6 = findViewById(R.id.checkBox6);
         btn2 = findViewById(R.id.btn2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Question4.this, FinalActivity.class);
+                startActivity(intent);
+            }
+        });
         checked();
     }
     public void checked(){
