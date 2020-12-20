@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
-import static com.example.apptest.FinalActivity.fin;
+
 
 public class Question4 extends AppCompatActivity {
     TextView text2, text3;
@@ -45,6 +45,9 @@ public class Question4 extends AppCompatActivity {
                 if(isChecked){
                     e[0] = true;
                 }
+                else{
+                    e[0]=false;
+                }
             }
         });
         checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -52,6 +55,9 @@ public class Question4 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     e[1] = false;
+                }
+                else{
+                    e[1]= true;
                 }
             }
         });
@@ -61,13 +67,18 @@ public class Question4 extends AppCompatActivity {
                 if(isChecked){
                     e[2] = false;
                 }
+                else{
+                    e[2]=true;
+                }
             }
         });
         checkBox4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
+                if (isChecked) {
                     e[3] = true;
+                } else {
+                    e[3] = false;
                 }
             }
         });
@@ -77,6 +88,9 @@ public class Question4 extends AppCompatActivity {
                 if(isChecked){
                     e[4] = false;
                 }
+                else{
+                    e[4]=true;
+                }
             }
         });
         checkBox6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -85,10 +99,13 @@ public class Question4 extends AppCompatActivity {
                 if(isChecked){
                     e[5] = true;
                 }
+                else{
+                    e[5]= false;
+                }
             }
         });
         if (e[0] == true && e[1] == false && e[2] == false && e[3] == true && e[4] == false && e[5]== true){
-            fin++;
+            FinalActivity.fin++;
         }
     }
 }

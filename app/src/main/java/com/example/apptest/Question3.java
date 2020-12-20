@@ -10,7 +10,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import static com.example.apptest.FinalActivity.fin;
 
 public class Question3 extends AppCompatActivity {
     RadioGroup radioGroup;
@@ -62,7 +61,7 @@ public class Question3 extends AppCompatActivity {
             }
         });
         if (checkedRadioButtonId == 2) {
-            fin++;
+            FinalActivity.fin++;
         }
     }
 }

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import static com.example.apptest.FinalActivity.fin;
+
 
 
 
@@ -42,7 +42,7 @@ public class Question2 extends AppCompatActivity {
             }
         });
         if(a == "Doublevar=double.MAX_VALUE"){
-            fin++;
+            FinalActivity.fin++;
         }
     }
 
