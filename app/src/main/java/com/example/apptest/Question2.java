@@ -19,6 +19,8 @@ public class Question2 extends AppCompatActivity {
     Button save2, next2;
     EditText et;
     String a = null;
+    String b = "Double var=double.MAX_VALUE;";
+    String c = "Double var = double.MAX_VALUE;";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +47,8 @@ public class Question2 extends AppCompatActivity {
         });
     }
     public void checked(){
-        if(a == "Double var=double.MAX_VALUE;" || a == "Double var = double.MAX_VALUE;"){
+        if(a.equals(b) || b.equals(c)){
             FinalActivity.fin++;
-            String qustion2 = null;
-            Log.d(qustion2, "work start2");
         }
     }
 

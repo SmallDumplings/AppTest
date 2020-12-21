@@ -40,32 +40,14 @@ public class Question3 extends AppCompatActivity {
             }
         });
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            //int id = radioGroup.getCheckedRadioButtonId();
 
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 quest.setText("Выбор сделан");
                 checked();
-                //switch (checkedId) {
-               //     case R.id.answ1:
-               //         checkedRadioButtonId = 1;
-               //     case R.id.answ2:
-               //         checkedRadioButtonId = 2;//ответ 2
-                //    case R.id.answ3:
-                //        checkedRadioButtonId = 3;
-               //     case R.id.answ4:
-                 //       checkedRadioButtonId = 4;
-                 //       quest.setText("Выбор сделан");
-                //        break;
-                 //   default:
-                  //      quest.setText("Сделайте выбор");
-                   //     break;
-              //  }
             }
         });
-        //if (checkedRadioButtonId == 2) {
-       //     FinalActivity.fin++;
-        //}
+
     }
     public void checked(){
         if(answ2.isChecked()){
