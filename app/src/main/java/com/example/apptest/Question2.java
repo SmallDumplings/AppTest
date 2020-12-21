@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ public class Question2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Question2.this, Question3.class);
                 startActivity(intent);
+                checked();
 
             }
         });
@@ -41,8 +43,12 @@ public class Question2 extends AppCompatActivity {
                 a = et.getText().toString();
             }
         });
-        if(a == "Doublevar=double.MAX_VALUE"){
+    }
+    public void checked(){
+        if(a == "Double var=double.MAX_VALUE;" || a == "Double var = double.MAX_VALUE;"){
             FinalActivity.fin++;
+            String qustion2 = null;
+            Log.d(qustion2, "work start2");
         }
     }
 
